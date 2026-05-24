@@ -54,3 +54,25 @@ if (document.getElementById('countdown')) {
   updateCountdown();
   setInterval(updateCountdown, 1000);
 }
+// ===== MÚSICA =====
+const audio = document.getElementById('musica-boda');
+const btn = document.getElementById('music-btn');
+
+if (audio && btn) {
+  // Intenta autoplay al cargar
+  audio.play().then(() => {
+    btn.classList.add('playing');
+  }).catch(() => {
+    // El navegador lo bloqueó, el botón queda visible para que el usuario lo active
+  });
+
+  btn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      btn.classList.add('playing');
+    } else {
+      audio.pause();
+      btn.classList.remove('playing');
+    }
+  });
+}
