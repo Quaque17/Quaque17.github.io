@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Nos Hemos Casado! — Quique &amp; Susana</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .coming-soon {
+      text-align: center;
+      padding: 8rem 2rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .coming-soon .big-icon { font-size: 4rem; margin-bottom: 1.5rem; display: block; }
+    .coming-soon p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .galeria-placeholder {
+      background: var(--crema-dark);
+      border-radius: 2px;
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--dorado);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <script src="js/nav.js"></script>
+
+  <div class="page-hero">
+    <p class="hero-ornament">20 · Septiembre · 2025</p>
+    <h1>¡Nos Hemos Casado!</h1>
+    <div class="hero-divider"></div>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--verde-light);font-size:1.1rem;">El comienzo de una nueva aventura</p>
+  </div>
+
+  <section class="section">
+    <div class="coming-soon">
+      <span class="big-icon">💑</span>
+      <p class="section-subtitle">Próximamente</p>
+      <h2 class="section-title">Estamos <em>casados</em></h2>
+      <div class="section-divider"></div>
+      <p>
+        ¡Lo hemos conseguido! Gracias a todos los que estuvisteis con nosotros en este día tan especial. Pronto publicaremos aquí las fotos y los recuerdos del gran día.
+      </p>
+      <p>
+        <!-- ✏️ Añade aquí un mensaje personal después de la boda -->
+        Mientras tanto, podéis enviarnos vuestras fotos y videos al correo o por WhatsApp. ¡Nos encantaría ver cómo lo vivisteis vosotros!
+      </p>
+      <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+    </div>
+  </section>
+
+  <!-- GALERÍA PLACEHOLDER (para rellenar con fotos después de la boda) -->
+  <section class="section" style="padding-top:0;">
+    <p class="section-subtitle">Recuerdos</p>
+    <h2 class="section-title">Nuestra <em>Galería</em></h2>
+    <div class="section-divider"></div>
+    <div class="galeria-grid">
+      <div class="galeria-placeholder">📸 Fotos próximamente</div>
+      <div class="galeria-placeholder">📸 Fotos próximamente</div>
+      <div class="galeria-placeholder">📸 Fotos próximamente</div>
+    </div>
+    <p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-top:1.5rem;">
+      <!-- ✏️ Para añadir fotos, sustituye los divs de galeria-placeholder por etiquetas &lt;img&gt; -->
+      Para añadir fotos reales, sustituye estos bloques por etiquetas &lt;img src="img/foto1.jpg"&gt;
+    </p>
+  </section>
+
+  <footer>
+    <p class="footer-names">Quique &amp; Susana</p>
+    <p>20 · Septiembre · 2025</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
