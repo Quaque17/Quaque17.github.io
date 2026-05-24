@@ -11,6 +11,14 @@
 
   <script src="js/nav.js"></script>
 
+  <!-- REPRODUCTOR MÚSICA -->
+  <audio id="musica-boda" loop preload="auto">
+    <source src="music/cancion.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-btn" id="music-btn" aria-label="Reproducir música">
+    <span class="music-icon">♪</span>
+  </button>
+
   <!-- HERO -->
   <section class="hero">
     <p class="hero-ornament">Os invitamos a nuestra boda</p>
@@ -26,7 +34,6 @@
     <p class="section-subtitle">Faltan</p>
     <h2 class="section-title">La cuenta atrás</h2>
     <div class="section-divider"></div>
-
     <div id="countdown" class="countdown">
       <div class="countdown-unit">
         <span class="countdown-number" id="cd-days">--</span>
@@ -45,59 +52,51 @@
         <span class="countdown-label">Segundos</span>
       </div>
     </div>
-
     <a href="el-fin-de-semana.html" class="btn btn-primary">Ver los eventos</a>
   </section>
 
   <!-- SEPARADOR -->
   <div class="ornamental-divider">— ✦ —</div>
 
-<!-- MINUTO A MINUTO -->
-<section class="seccion-timeline">
-  <p class="section-subtitle tl-sub">El gran día</p>
-  <h2 class="section-title tl-tit">Minuto <em>a minuto</em></h2>
-  <div class="section-divider tl-div"></div>
-
-  <div class="tl-lista">
-
-    <div class="tl-item">
-      <div class="tl-circulo">☀️</div>
-      <p class="tl-hora">16:00 h</p>
-      <p class="tl-nombre">Ceremonia</p>
-      <p class="tl-desc">Nos damos el "Sí, quiero" rodeados de las personas que más queremos.</p>
+  <!-- MINUTO A MINUTO -->
+  <section class="seccion-timeline">
+    <p class="section-subtitle tl-sub">El gran día</p>
+    <h2 class="section-title tl-tit">Minuto <em>a minuto</em></h2>
+    <div class="section-divider tl-div"></div>
+    <div class="tl-lista">
+      <div class="tl-item">
+        <div class="tl-circulo">☀️</div>
+        <p class="tl-hora">16:00 h</p>
+        <p class="tl-nombre">Ceremonia</p>
+        <p class="tl-desc">Nos damos el "Sí, quiero" rodeados de las personas que más queremos.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-circulo">🥂</div>
+        <p class="tl-hora">17:30 h</p>
+        <p class="tl-nombre">Cóctel</p>
+        <p class="tl-desc">Brindamos juntos al aire libre mientras el sol empieza a bajar.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-circulo">🍽️</div>
+        <p class="tl-hora">20:00 h</p>
+        <p class="tl-nombre">Cena</p>
+        <p class="tl-desc">Cenar juntos hace esta noche todavía más especial.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-circulo">💃</div>
+        <p class="tl-hora">22:00 h</p>
+        <p class="tl-nombre">Baile</p>
+        <p class="tl-desc">¡Comienza la diversión! La pista os está esperando.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-circulo">🌙</div>
+        <p class="tl-hora">00:00 h</p>
+        <p class="tl-nombre">Recena</p>
+        <p class="tl-desc">Para los que aguanten, fogatas y picoteo junto al mar.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="tl-item">
-      <div class="tl-circulo">🥂</div>
-      <p class="tl-hora">17:30 h</p>
-      <p class="tl-nombre">Cóctel</p>
-      <p class="tl-desc">Brindamos juntos al aire libre mientras el sol empieza a bajar.</p>
-    </div>
-
-    <div class="tl-item">
-      <div class="tl-circulo">🍽️</div>
-      <p class="tl-hora">20:00 h</p>
-      <p class="tl-nombre">Cena</p>
-      <p class="tl-desc">Cenar juntos hace esta noche todavía más especial.</p>
-    </div>
-
-    <div class="tl-item">
-      <div class="tl-circulo">💃</div>
-      <p class="tl-hora">22:00 h</p>
-      <p class="tl-nombre">Baile</p>
-      <p class="tl-desc">¡Comienza la diversión! La pista os está esperando.</p>
-    </div>
-
-    <div class="tl-item">
-      <div class="tl-circulo">🌙</div>
-      <p class="tl-hora">00:00 h</p>
-      <p class="tl-nombre">Recena</p>
-      <p class="tl-desc">Para los que aguanten, fogatas y picoteo junto al mar.</p>
-    </div>
-
-  </div>
-</section>
-  
   <!-- ACCESOS RÁPIDOS -->
   <section class="section" style="padding-top:0;">
     <div class="info-grid">
@@ -135,19 +134,9 @@
   <!-- FOOTER -->
   <footer>
     <p class="footer-names">Quique &amp; Susana</p>
-    <p>20 · Septiembre · 2025</p>
+    <p>12 · Diciembre · 2026</p>
   </footer>
 
   <script src="js/main.js"></script>
-  
-<!-- REPRODUCTOR MÚSICA -->
-<audio id="musica-boda" loop preload="auto">
-  <source src="music/cancion.mp3" type="audio/mpeg">
-</audio>
-
-<button class="music-btn" id="music-btn" aria-label="Reproducir música">
-  <span class="music-icon">♪</span>
-</button>
-  
 </body>
 </html>
