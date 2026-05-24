@@ -133,7 +133,9 @@ nav {
   text-align: center;
   padding: 2rem;
   position: relative;
-  background: var(--crema);
+  background-image: url('https://github.com/Quaque17/Quaque17.github.io/tree/main/img/c1dd4bbc-cd3b-4c6b-88b2-6cb4674f91f2.png');
+  background-size: cover;
+  background-position: center center;
   overflow: hidden;
 }
 
@@ -141,7 +143,7 @@ nav {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(61,79,60,0.07) 0%, transparent 70%);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .hero-ornament {
@@ -191,6 +193,16 @@ nav {
   color: var(--verde-light);
   max-width: 420px;
 }
+
+/* Texto hero sobre foto */
+.hero .hero-ornament { color: #d4b47e; }
+.hero h1 { color: #ffffff; }
+.hero h1 em { color: #d4b47e; }
+.hero .hero-fecha { color: rgba(255,255,255,0.75); }
+.hero .hero-tagline { color: rgba(255,255,255,0.85); }
+.hero .hero-divider { background: #d4b47e; }
+.hero .scroll-hint span { color: rgba(255,255,255,0.6); }
+.hero .scroll-hint::after { background: #d4b47e; }
 
 .scroll-hint {
   position: absolute;
