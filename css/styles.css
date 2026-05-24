@@ -564,3 +564,144 @@ footer p {
   .countdown-number { font-size: 2.5rem; }
   .lista-box { padding: 2rem 1.5rem; }
 }
+/* ---- MINUTO A MINUTO / TIMELINE ---- */
+.seccion-timeline {
+  background-image: url('https://raw.githubusercontent.com/Quaque17/Quaque17.github.io/main/img/c1dd4bbc-cd3b-4c6b-88b2-6cb4674f91f2.png');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  max-width: 100%;
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.seccion-timeline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 40, 30, 0.72);
+  z-index: 0;
+}
+
+.seccion-timeline > * {
+  position: relative;
+  z-index: 1;
+}
+
+.seccion-timeline .section-subtitle { color: #d4b47e; }
+.seccion-timeline .section-title { color: #ffffff; }
+.seccion-timeline .section-title em { color: #d4b47e; }
+.seccion-timeline .section-divider { background: #d4b47e; }
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  margin-top: 3.5rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 160px;
+  max-width: 220px;
+  position: relative;
+}
+
+.timeline-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(212, 180, 126, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-hora {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #d4b47e;
+  margin-bottom: 0.5rem;
+}
+
+/* La línea horizontal que conecta los items */
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: calc(50% + 35px);
+  right: calc(-50% + 35px);
+  height: 1px;
+  background: rgba(212, 180, 126, 0.4);
+  z-index: 1;
+}
+
+.timeline-content {
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.timeline-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-content p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Mobile: timeline vertical */
+@media (max-width: 640px) {
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .timeline-item {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+    width: 100%;
+    gap: 1.25rem;
+    padding-bottom: 2rem;
+    position: relative;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    top: 70px;
+    left: 35px;
+    right: auto;
+    width: 1px;
+    height: calc(100% - 35px);
+    background: rgba(212, 180, 126, 0.4);
+  }
+
+  .timeline-icon {
+    flex-shrink: 0;
+  }
+
+  .timeline-content {
+    text-align: left;
+    padding-top: 0.75rem;
+  }
+}
