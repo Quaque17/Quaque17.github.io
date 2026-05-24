@@ -667,6 +667,41 @@ footer p {
     padding-top: 0.75rem;
   }
 }
+
+/* ---- BOTÓN MÚSICA ---- */
+.music-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 200;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--verde);
+  border: 1px solid var(--dorado);
+  color: var(--dorado-light);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.music-btn:hover {
+  background: var(--dorado);
+  color: var(--white);
+}
+
+.music-btn.playing .music-icon {
+  animation: spin-note 3s linear infinite;
+}
+
+@keyframes spin-note {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* ---- MOBILE ---- */
 @media (max-width: 768px) {
   nav { padding: 0 1.5rem; }
