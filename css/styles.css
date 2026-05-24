@@ -667,7 +667,25 @@ footer p {
     padding-top: 0.75rem;
   }
 }
+/* ---- RSVP ---- */
+.seccion-rsvp { text-align: center; }
 
+.rsvp-intro {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.rsvp-intro strong { color: var(--verde); font-weight: 500; }
+
+.rsvp-form-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--crema-dark);
+  border-radius: 2px;
+  overflow: hidden;
+}
 /* ---- BOTÓN MÚSICA ---- */
 .music-btn {
   position: fixed;
