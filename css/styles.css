@@ -136,6 +136,7 @@ nav {
   background-image: url('https://raw.githubusercontent.com/Quaque17/Quaque17.github.io/main/img/c1dd4bbc-cd3b-4c6b-88b2-6cb4674f91f2.png');
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
@@ -143,7 +144,14 @@ nav {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.40);
+  z-index: 0;
+}
+
+/* Todo el contenido por encima del overlay */
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-ornament {
@@ -151,7 +159,7 @@ nav {
   font-size: 1rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--dorado);
+  color: #d4b47e;
   margin-bottom: 1.5rem;
 }
 
@@ -160,14 +168,21 @@ nav {
   font-size: clamp(3.5rem, 8vw, 7rem);
   font-weight: 300;
   line-height: 1.1;
-  color: var(--verde);
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
 .hero h1 em {
   font-style: italic;
   font-weight: 300;
-  color: var(--dorado);
+  color: #d4b47e;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 1px;
+  background: #d4b47e;
+  margin: 0 auto 1.5rem;
 }
 
 .hero-fecha {
@@ -175,34 +190,17 @@ nav {
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.75);
   margin: 1.5rem 0;
-}
-
-.hero-divider {
-  width: 80px;
-  height: 1px;
-  background: var(--dorado);
-  margin: 0 auto 1.5rem;
 }
 
 .hero-tagline {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
   font-style: italic;
-  color: var(--verde-light);
+  color: rgba(255, 255, 255, 0.88);
   max-width: 420px;
 }
-
-/* Texto hero sobre foto */
-.hero .hero-ornament { color: #d4b47e; }
-.hero h1 { color: #ffffff; }
-.hero h1 em { color: #d4b47e; }
-.hero .hero-fecha { color: rgba(255,255,255,0.75); }
-.hero .hero-tagline { color: rgba(255,255,255,0.85); }
-.hero .hero-divider { background: #d4b47e; }
-.hero .scroll-hint span { color: rgba(255,255,255,0.6); }
-.hero .scroll-hint::after { background: #d4b47e; }
 
 .scroll-hint {
   position: absolute;
@@ -214,20 +212,21 @@ nav {
   align-items: center;
   gap: 6px;
   animation: bounce 2s infinite;
+  z-index: 1;
 }
 
 .scroll-hint span {
   font-size: 0.65rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .scroll-hint::after {
   content: '';
   width: 1px;
   height: 40px;
-  background: var(--dorado);
+  background: #d4b47e;
 }
 
 @keyframes bounce {
