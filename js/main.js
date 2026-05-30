@@ -1,3 +1,50 @@
+// ===== MÚSICA PERSISTENTE ENTRE PÁGINAS =====
+const MUSIC_KEY = 'boda_music_playing';
+const MUSIC_TIME = 'boda_music_time';
+
+const audio = document.getElementById('musica-boda');
+const btn = document.getElementById('music-btn');
+
+if (audio && btn) {
+  const wasPlaying = sessionStorage.getItem(MUSIC_KEY) === 'true';
+  const savedTime = parseFloat(sessionStorage.getItem(MUSIC_TIME) || '0');
+
+  audio.currentTime = savedTime;
+
+  if (wasPlaying) {
+    audio.play().then(() => {
+      btn.classList.add('playing');
+    }).catch(() => {});
+  }
+
+  window.addEventListener('beforeunload', () => {
+    sessionStorage.setItem(MUSIC_KEY, (!audio.paused).toString());
+    sessionStorage.setItem(MUSIC_TIME, audio.currentTime.toString());
+  });
+
+  btn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      btn.classList.add('playing');
+      sessionStorage.setItem(MUSIC_KEY, 'true');
+    } else {
+      audio.pause();
+      btn.classList.remove('playing');
+      sessionStorage.setItem(MUSIC_KEY, 'false');
+    }
+  });
+
+  // Intentar autoplay solo la primera vez
+  if (sessionStorage.getItem(MUSIC_KEY) === null) {
+    audio.play().then(() => {
+      btn.classList.add('playing');
+      sessionStorage.setItem(MUSIC_KEY, 'true');
+    }).catch(() => {
+      sessionStorage.setItem(MUSIC_KEY, 'false');
+    });
+  }
+}
+
 // ===== MENÚ HAMBURGUESA =====
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -14,25 +61,20 @@ if (hamburger && navLinks) {
 }
 
 // ===== LINK ACTIVO =====
-const currentPath = window.location.pathname.replace(/\/$/, '') || '/index';
+const currentPath = window.location.pathname;
 document.querySelectorAll('.nav-links a').forEach(link => {
-  const href = link.getAttribute('href').replace(/\/$/, '');
-  if (currentPath.endsWith(href.replace('.html', ''))) {
+  const href = link.getAttribute('href').replace('.html', '');
+  if (href !== 'index' && currentPath.includes(href)) {
     link.classList.add('active');
   }
 });
 
 // ===== CUENTA ATRÁS =====
 function updateCountdown() {
-  const wedding = new Date('2025-09-20T16:00:00');
+  const wedding = new Date('2026-12-12T16:00:00');
   const now = new Date();
   const diff = wedding - now;
-
-  if (diff <= 0) {
-    const el = document.getElementById('countdown');
-    if (el) el.innerHTML = '<p style="font-family:Cormorant Garamond,serif;font-size:2rem;color:var(--verde)">¡Ya estamos casados! 🎉</p>';
-    return;
-  }
+  if (diff <= 0) return;
 
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -43,7 +85,6 @@ function updateCountdown() {
     const el = document.getElementById(id);
     if (el) el.textContent = String(val).padStart(2, '0');
   };
-
   set('cd-days', days);
   set('cd-hours', hours);
   set('cd-minutes', minutes);
@@ -53,26 +94,4 @@ function updateCountdown() {
 if (document.getElementById('countdown')) {
   updateCountdown();
   setInterval(updateCountdown, 1000);
-}
-// ===== MÚSICA =====
-const audio = document.getElementById('musica-boda');
-const btn = document.getElementById('music-btn');
-
-if (audio && btn) {
-  // Intenta autoplay al cargar
-  audio.play().then(() => {
-    btn.classList.add('playing');
-  }).catch(() => {
-    // El navegador lo bloqueó, el botón queda visible para que el usuario lo active
-  });
-
-  btn.addEventListener('click', () => {
-    if (audio.paused) {
-      audio.play();
-      btn.classList.add('playing');
-    } else {
-      audio.pause();
-      btn.classList.remove('playing');
-    }
-  });
 }
