@@ -10,10 +10,17 @@
 
   <script src="js/nav.js"></script>
 
+  <audio id="musica-boda" loop preload="auto">
+    <source src="music/cancion.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-btn" id="music-btn" aria-label="Reproducir música">
+    <span class="music-icon">♪</span>
+  </button>
+
   <div class="page-hero">
-    <p class="hero-ornament">La Celebración</p>
+    <p class="hero-ornament" style="color:var(--dorado);">La Celebración</p>
     <h1>El Fin de Semana</h1>
-    <div class="hero-divider"></div>
+    <div class="section-divider"></div>
     <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--verde-light);font-size:1.1rem;">¡Estamos de celebración!</p>
   </div>
 
@@ -25,73 +32,23 @@
 
     <!-- VIERNES -->
     <div class="event-card">
-      <p class="event-tag">Viernes, 19 de Septiembre</p>
-      <h3 class="event-title">Fiesta de Bienvenida</h3>
-      <p class="event-meta">19:30 — 21:00 · Casa de los anfitriones</p>
+      <p class="event-tag">Viernes, 11 de Diciembre</p>
+      <h3 class="event-title">Quedada de Bienvenida</h3>
+      <p class="event-meta">19:00 h · La Tasquita La Farmacia</p>
       <div class="event-body">
-        <p>Disfrutad con nosotros de la puesta de sol y de una magnífica barbacoa. Sería genial que os pusierais de acuerdo para compartir coche y reducir el número de vehículos.</p>
-        <p><strong style="color:var(--verde)">Vestimenta:</strong> Lo que queráis, desde vestidos veraniegos hasta vuestra camisa fresquita favorita. Estaremos al aire libre, así que os recomendamos traer algo de abrigo para cuando anochezca.</p>
+        <p>¡Empezamos la celebración el jueves por la noche! Os invitamos a tomar algo con nosotros en La Tasquita La Farmacia desde las 7 de la tarde. Una forma perfecta de reencontrarse antes del gran día.</p>
       </div>
     </div>
 
     <!-- SÁBADO BODA -->
     <div class="event-card">
-      <p class="event-tag">Sábado, 20 de Septiembre · El Gran Día</p>
+      <p class="event-tag">Sábado, 12 de Diciembre · El Gran Día</p>
       <h3 class="event-title">¡La Boda!</h3>
-      <p class="event-meta">16:00 — 22:00 · Lugar de celebración</p>
+      <p class="event-meta">12:00 — 00:00 h · Madrid</p>
       <div class="event-body">
-        <p>Nos gustaría que estuvierais con nosotros cuando nos demos el "Sí, quiero". Es un día para celebrar, comer tarta y bailar hasta que el cuerpo aguante.</p>
-        <p><strong style="color:var(--verde)">Damas:</strong> No olvidéis vuestro vestido de fiesta favorito. Tenemos previsto un pequeño paseo por el exterior, así que las sandalias de cuña pueden ser vuestras mejores aliadas.</p>
-        <p><strong style="color:var(--verde)">Caballeros:</strong> Traed vuestro traje favorito (corbata o pajarita incluida). Podéis dejaros la chaqueta en casa si no sois ese tipo de persona.</p>
-      </div>
-    </div>
-
-    <!-- SÁBADO RECENA -->
-    <div class="event-card">
-      <p class="event-tag">Sábado, 20 de Septiembre · Noche</p>
-      <h3 class="event-title">Después de la fiesta, viene la recena</h3>
-      <p class="event-meta">22:00 — 00:00 · Junto al mar</p>
-      <div class="event-body">
-        <p>Normalmente nos vamos a la cama supertemprano, pero uno no se casa todos los días… Habrá bebidas, algo de picar y fogatas junto a la orilla del mar.</p>
-        <p><strong style="color:var(--verde)">Vestimenta:</strong> Nos encantaría que os cambiarais de ropa y os pusierais algo cómodo (vaqueros, sudadera, etc.). Nosotros llevaremos ropa para cambiarnos.</p>
-      </div>
-    </div>
-
-    <!-- DOMINGO -->
-    <div class="event-card">
-      <p class="event-tag">Domingo, 21 de Septiembre</p>
-      <h3 class="event-title">Brunch en la playa</h3>
-      <p class="event-meta">10:30 — 13:30 · Cabaña familiar</p>
-      <div class="event-body">
-        <p>Que no nos enteremos de que os vais sin despediros… Venid a la cabaña para pescar algo, jugar a las palas en la playa y visitar la casa que construyó el bisabuelo.</p>
-        <p><strong style="color:var(--verde)">Vestimenta:</strong> Traed ropa de playa cómoda. Nosotros llevaremos camiseta, pantalón corto y zapatillas de deporte.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="ornamental-divider">— ✦ —</div>
-
-  <!-- TRANSPORTE -->
-  <section class="section" style="padding-top:2rem;">
-    <p class="section-subtitle">Cómo llegar</p>
-    <h2 class="section-title"><em>Transporte</em></h2>
-    <div class="section-divider"></div>
-
-    <div class="info-grid">
-      <div class="info-block">
-        <span class="info-icon">🚗</span>
-        <h3>Alquiler de Coche</h3>
-        <p>Te recomendamos que alquiles un coche para que puedas disfrutar de toda la costa de camino. Estamos aproximadamente a una hora en coche del centro.</p>
-      </div>
-      <div class="info-block">
-        <span class="info-icon">✈️</span>
-        <h3>Traslado al Aeropuerto</h3>
-        <p>Si has quedado con familiares o amigos y necesitáis transporte desde y hacia el aeropuerto, puedes contratar un servicio de traslado.</p>
-      </div>
-      <div class="info-block">
-        <span class="info-icon">🚕</span>
-        <h3>Taxi y Viaje Compartido</h3>
-        <p>La mayoría de los transportes compartidos vienen de lugares que están a más de 30 minutos. También puedes venir en taxi.</p>
+        <p>Nos damos el "Sí, quiero" en la iglesia de Santa María Micaela y San Enrique a las 12:00 h, seguido de banquete en Initium Bodas y Eventos. ¡Un día para celebrar, comer tarta y bailar!</p>
+        <p><strong style="color:var(--verde)">Damas:</strong> Vestido de fiesta. Las sandalias de cuña pueden ser vuestras mejores aliadas.</p>
+        <p><strong style="color:var(--verde)">Caballeros:</strong> Traje con corbata o pajarita.</p>
       </div>
     </div>
   </section>
@@ -104,22 +61,76 @@
     <h2 class="section-title"><em>Alojamiento</em></h2>
     <div class="section-divider"></div>
 
-    <div style="max-width:660px;margin:0 auto;">
-      <div class="event-card">
-        <p class="event-tag">Consejo nº1</p>
-        <h3 class="event-title" style="font-size:1.4rem;">Reserva cuanto antes</h3>
-        <p class="event-body">Te recomendamos que reserves alojamiento en cuanto sepas que puedes venir. La zona no tiene muchas opciones y se llenan rápido en fin de semana.</p>
-      </div>
-      <div class="event-card">
-        <p class="event-tag">Consejo nº2</p>
-        <h3 class="event-title" style="font-size:1.4rem;">Coordínate con amigos y familia</h3>
-        <p class="event-body">Muchos de los alojamientos tienen opciones para grupos. Puedes alquilar una casita junto a la playa en grupo para ahorrar dinero (¡y es más divertido!).</p>
-      </div>
-      <div class="event-card">
-        <p class="event-tag">Consejo nº3</p>
-        <h3 class="event-title" style="font-size:1.4rem;">Quédate todo el fin de semana</h3>
-        <p class="event-body">Sabemos que todos andamos liados, pero nos encantaría disfrutar de tu compañía durante todo el finde. Si puedes, reserva de viernes a domingo.</p>
-      </div>
+    <p style="text-align:center;color:var(--text-muted);font-size:0.92rem;max-width:600px;margin:0 auto 2.5rem;line-height:1.8;">
+      Os dejamos una selección de hoteles cercanos al lugar de celebración. Os recomendamos reservar cuanto antes, especialmente en diciembre.
+    </p>
+
+    <div class="hotel-grid">
+
+      <a href="https://maps.app.goo.gl/mQLz4K1jVJXjgPFZ9" target="_blank" rel="noopener" class="hotel-card">
+        <div class="hotel-info">
+          <p class="hotel-cadena">Marriott — AC Hotels</p>
+          <h3 class="hotel-nombre">AC Hotel Iria</h3>
+          <span class="hotel-link">Ver en Google Maps →</span>
+        </div>
+      </a>
+
+      <a href="https://maps.app.goo.gl/Y7eHJX1KqEzxeEiD7" target="_blank" rel="noopener" class="hotel-card">
+        <div class="hotel-info">
+          <p class="hotel-cadena">Meliá Hotels</p>
+          <h3 class="hotel-nombre">Meliá Castilla</h3>
+          <span class="hotel-link">Ver en Google Maps →</span>
+        </div>
+      </a>
+
+      <a href="https://maps.app.goo.gl/1J5qBm6WGHrKiWms6" target="_blank" rel="noopener" class="hotel-card">
+        <div class="hotel-info">
+          <p class="hotel-cadena">H10 Hotels</p>
+          <h3 class="hotel-nombre">H10 Tribeca</h3>
+          <span class="hotel-link">Ver en Google Maps →</span>
+        </div>
+      </a>
+
+      <a href="https://maps.app.goo.gl/KzHVvjQ2F5VgNUAe7" target="_blank" rel="noopener" class="hotel-card">
+        <div class="hotel-info">
+          <p class="hotel-cadena">Luze Hoteles</p>
+          <h3 class="hotel-nombre">Hotel Luze Castellana</h3>
+          <span class="hotel-link">Ver en Google Maps →</span>
+        </div>
+      </a>
+
+      <a href="https://maps.app.goo.gl/Y7eHJX1KqEzxeEiD7" target="_blank" rel="noopener" class="hotel-card">
+        <div class="hotel-info">
+          <p class="hotel-cadena">Meliá Rewards</p>
+          <h3 class="hotel-nombre">Meliá (opción individual)</h3>
+          <span class="hotel-link">Ver en Google Maps →</span>
+        </div>
+      </a>
+
+      <a href="https://maps.app.goo.gl/cVVqHpRDkFKkN1Nt6" target="_blank" rel="noopener" class="hotel-card">
+        <div class="hotel-info">
+          <p class="hotel-cadena">Leonardo Hotels</p>
+          <h3 class="hotel-nombre">NYX Hotel Madrid</h3>
+          <span class="hotel-link">Ver en Google Maps →</span>
+        </div>
+      </a>
+
+      <a href="https://maps.app.goo.gl/8bFJXaDrDJcYhTap8" target="_blank" rel="noopener" class="hotel-card">
+        <div class="hotel-info">
+          <p class="hotel-cadena">Independiente</p>
+          <h3 class="hotel-nombre">Hotel Infanta Mercedes</h3>
+          <span class="hotel-link">Ver en Google Maps →</span>
+        </div>
+      </a>
+
+      <a href="https://maps.app.goo.gl/3nGFG7z4XqzTh8rQ6" target="_blank" rel="noopener" class="hotel-card">
+        <div class="hotel-info">
+          <p class="hotel-cadena">Marriott — 5★</p>
+          <h3 class="hotel-nombre">The Westin Madrid Cuzco</h3>
+          <span class="hotel-link">Ver en Google Maps →</span>
+        </div>
+      </a>
+
     </div>
   </section>
 
@@ -131,23 +142,56 @@
     <h2 class="section-title">Qué <em>hacer</em></h2>
     <div class="section-divider"></div>
 
-    <div class="info-grid">
-      <div class="info-block">
-        <span class="info-icon">🚣</span>
-        <h3>Actividades</h3>
-        <p>Date una vuelta por el puerto para pescar o hacer piragüismo y padelsurf. Visita el parque natural. Disfruta de la tirolina y del parque de arborismo.</p>
-      </div>
-      <div class="info-block">
-        <span class="info-icon">🍽️</span>
-        <h3>Dónde Comer</h3>
-        <p>Cafetería y pastelería local. Desayunos en el mercado. Ostras frescas en el puerto. Tómate una caña en cualquiera de los bares de la zona.</p>
+    <div class="event-card">
+      <p class="event-tag">Mercado</p>
+      <h3 class="event-title">Mercado de Nuevos Ministerios</h3>
+      <p class="event-meta">Cerca del lugar de celebración</p>
+      <div class="event-body">
+        <p>El Mercado de Nuevos Ministerios es una visita perfecta si queréis pasear, comprar algo de picar o simplemente disfrutar del ambiente madrileño antes o después de la boda.</p>
       </div>
     </div>
+
+    <div class="event-card">
+      <p class="event-tag">Restaurantes cerca de Plaza de San Amaro</p>
+      <h3 class="event-title">Dónde Comer</h3>
+      <p class="event-meta">Recomendaciones de la zona</p>
+      <div class="event-body">
+        <p>La zona de la Plaza de San Amaro tiene una estupenda oferta gastronómica. Estas son algunas de nuestras recomendaciones:</p>
+        <div class="restaurante-lista">
+          <div class="restaurante-item">
+            <span class="restaurante-nombre">Viavélez</span>
+            <span class="restaurante-tipo">Cocina asturiana · Estrella Michelin</span>
+            <a href="https://maps.app.goo.gl/VhL4f3YTuXPUfYCS8" target="_blank" rel="noopener" class="restaurante-mapa">Ver en mapa →</a>
+          </div>
+          <div class="restaurante-item">
+            <span class="restaurante-nombre">Combarro</span>
+            <span class="restaurante-tipo">Cocina gallega · Pescados y mariscos</span>
+            <a href="https://maps.app.goo.gl/tCjWy3HuSfvqFmRu5" target="_blank" rel="noopener" class="restaurante-mapa">Ver en mapa →</a>
+          </div>
+          <div class="restaurante-item">
+            <span class="restaurante-nombre">La Mordida</span>
+            <span class="restaurante-tipo">Cocina mexicana · Ambiente informal</span>
+            <a href="https://maps.app.goo.gl/QhezL1bm1bBJHwxY6" target="_blank" rel="noopener" class="restaurante-mapa">Ver en mapa →</a>
+          </div>
+          <div class="restaurante-item">
+            <span class="restaurante-nombre">Saona</span>
+            <span class="restaurante-tipo">Mediterráneo · Brunch y comidas</span>
+            <a href="https://maps.app.goo.gl/NzdD2vN2FiCXugjD7" target="_blank" rel="noopener" class="restaurante-mapa">Ver en mapa →</a>
+          </div>
+          <div class="restaurante-item">
+            <span class="restaurante-nombre">El Sur</span>
+            <span class="restaurante-tipo">Cocina española · Tapas</span>
+            <a href="https://maps.app.goo.gl/7bCuMGX7v8oMUkXw9" target="_blank" rel="noopener" class="restaurante-mapa">Ver en mapa →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <footer>
     <p class="footer-names">Quique &amp; Susana</p>
-    <p>20 · Septiembre · 2025</p>
+    <p>12 · Diciembre · 2026</p>
   </footer>
 
   <script src="js/main.js"></script>
