@@ -875,3 +875,90 @@ footer p {
     box-sizing: border-box;
   }
 }
+/* ---- HOTELES (tarjeta con enlace) ---- */
+.hotel-link-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.hotel-link-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+}
+
+.hotel-link-card:hover .event-title {
+  color: var(--dorado);
+  transition: color 0.3s;
+}
+
+.hotel-link-card .event-meta {
+  color: var(--dorado);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+}
+
+/* ---- RESTAURANTES ---- */
+.restaurante-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0.5rem;
+}
+
+.restaurante-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--crema-dark);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.restaurante-fila:last-child { border-bottom: none; }
+
+.restaurante-fila:hover .restaurante-nombre { color: var(--dorado); }
+
+.restaurante-fila > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.restaurante-nombre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--verde);
+  font-weight: 400;
+  transition: color 0.3s;
+  display: block;
+}
+
+.restaurante-tipo {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+.restaurante-ir {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dorado);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .restaurante-fila {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .restaurante-ir { margin-top: 0.1rem; }
+}
