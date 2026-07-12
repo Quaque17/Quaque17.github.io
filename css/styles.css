@@ -494,6 +494,66 @@ nav {
   letter-spacing: 0.25em;
 }
 
+/* ---- AGRADECIMIENTO ---- */
+.seccion-gracias {
+  text-align: center;
+}
+
+.gracias-texto {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
+.gracias-texto p {
+  margin-bottom: 1.25rem;
+}
+
+.gracias-texto p:last-child { margin-bottom: 0; }
+
+.gracias-firma {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: var(--verde);
+  margin-top: 2rem !important;
+}
+
+.gracias-firma em {
+  font-style: italic;
+  color: var(--dorado);
+}
+
+.gracias-cuenta {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-top: 1px solid var(--crema-dark);
+}
+
+.gracias-cuenta-texto {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.gracias-iban {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--verde);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.gracias-cuenta-nota {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+  opacity: 0.8;
+}
+
 /* ---- SEPARADOR DECORATIVO ---- */
 .ornamental-divider {
   text-align: center;
@@ -780,6 +840,7 @@ footer p {
   .hamburger { display: flex; }
   .section { padding: 4rem 1.5rem; }
   .seccion-rsvp { padding: 4rem 1.5rem; }
+  .seccion-gracias { padding: 4rem 1.5rem; }
   .hero h1 { font-size: clamp(3rem, 12vw, 5rem); }
   .hero-tagline { font-size: 1.1rem; }
   .info-grid { grid-template-columns: 1fr; gap: 1.25rem; }
@@ -804,6 +865,19 @@ footer p {
     box-sizing: border-box;
   }
 
+  /* Agradecimiento móvil */
+  .gracias-texto { font-size: 0.95rem; }
+  .gracias-cuenta { padding: 1.5rem 0; }
+
+  /* Restaurantes móvil */
+  .restaurante-fila {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .restaurante-ir { margin-top: 0.1rem; }
+
   /* ---- MINUTO A MINUTO MÓVIL ---- */
   .seccion-timeline {
     background-attachment: scroll;
@@ -815,13 +889,11 @@ footer p {
     max-width: 100%;
   }
 
-  /* Línea vertical a la izquierda */
   .tl2-linea::before {
     left: 3rem;
     transform: none;
   }
 
-  /* Cambiamos grid por flex para control total */
   .tl2-fila {
     display: flex;
     flex-direction: row;
@@ -837,7 +909,6 @@ footer p {
     right: 0;
   }
 
-  /* Corazón siempre primero a la izquierda */
   .tl2-centro {
     order: 1;
     width: 3rem;
@@ -846,26 +917,12 @@ footer p {
     align-self: center;
   }
 
-  /* Texto siempre segundo */
-  .tl2-izq,
-  .tl2-der {
+  .tl2-fila:not(.reverse) .tl2-izq {
+    display: block;
     order: 2;
     flex: 1;
     text-align: left;
     padding: 0 0.75rem;
-  }
-
-  /* Imagen siempre tercera y más pequeña */
-  .tl2-izq img,
-  .tl2-der img {
-    order: 3;
-  }
-
-  /* Fila normal: texto en izq, imagen en der */
-  /* Mostramos tl2-izq (texto) y ocultamos tl2-der (imagen) */
-  .tl2-fila:not(.reverse) .tl2-izq {
-    display: block;
-    order: 2;
   }
 
   .tl2-fila:not(.reverse) .tl2-der {
@@ -876,11 +933,12 @@ footer p {
     align-items: center;
   }
 
-  /* Fila reverse: imagen en izq, texto en der */
-  /* Mostramos tl2-der (texto) y recolocamos tl2-izq (imagen) */
   .tl2-fila.reverse .tl2-der {
     display: block;
     order: 2;
+    flex: 1;
+    text-align: left;
+    padding: 0 0.75rem;
   }
 
   .tl2-fila.reverse .tl2-izq {
@@ -897,13 +955,4 @@ footer p {
     height: 50px;
     opacity: 0.75;
   }
-
-  /* Restaurantes móvil */
-  .restaurante-fila {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.4rem;
-  }
-
-  .restaurante-ir { margin-top: 0.1rem; }
 }
