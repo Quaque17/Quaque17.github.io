@@ -372,7 +372,6 @@ nav {
   text-transform: lowercase;
 }
 
-/* Contenedor principal */
 .tl2-linea {
   position: relative;
   margin-top: 3rem;
@@ -382,7 +381,6 @@ nav {
   padding: 0 2rem;
 }
 
-/* Línea vertical central */
 .tl2-linea::before {
   content: '';
   position: absolute;
@@ -394,7 +392,6 @@ nav {
   z-index: 0;
 }
 
-/* Cada fila: texto | corazón | imagen  o  imagen | corazón | texto */
 .tl2-fila {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -469,6 +466,61 @@ nav {
   height: 90px;
   object-fit: contain;
   opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .seccion-timeline {
+    background-attachment: scroll;
+    padding: 4rem 0;
+  }
+
+  .tl2-linea {
+    padding: 0 1.25rem;
+    max-width: 100%;
+  }
+
+  .tl2-linea::before {
+    left: 2.5rem;
+    transform: none;
+  }
+
+  .tl2-fila {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: auto;
+    padding: 1.75rem 0;
+  }
+
+  .tl2-centro {
+    width: 2.5rem;
+    flex-shrink: 0;
+    justify-content: center;
+    padding-top: 0.1rem;
+    align-self: flex-start;
+  }
+
+  .tl2-fila:not(.reverse) .tl2-der { display: none; }
+  .tl2-fila.reverse .tl2-izq { display: none; }
+
+  .tl2-fila:not(.reverse) .tl2-izq {
+    display: block;
+    text-align: left;
+    padding: 0 0.75rem;
+    flex: 1;
+  }
+
+  .tl2-fila.reverse .tl2-der {
+    display: block;
+    text-align: left;
+    padding: 0 0.75rem;
+    flex: 1;
+  }
+
+  .tl2-fila:not(:last-child)::after {
+    left: 0;
+    right: 0;
+  }
 }
 
 /* ---- RSVP ---- */
