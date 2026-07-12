@@ -468,61 +468,6 @@ nav {
   opacity: 0.85;
 }
 
-@media (max-width: 768px) {
-  .seccion-timeline {
-    background-attachment: scroll;
-    padding: 4rem 0;
-  }
-
-  .tl2-linea {
-    padding: 0 1.25rem;
-    max-width: 100%;
-  }
-
-  .tl2-linea::before {
-    left: 2.5rem;
-    transform: none;
-  }
-
-  .tl2-fila {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    min-height: auto;
-    padding: 1.75rem 0;
-  }
-
-  .tl2-centro {
-    width: 2.5rem;
-    flex-shrink: 0;
-    justify-content: center;
-    padding-top: 0.1rem;
-    align-self: flex-start;
-  }
-
-  .tl2-fila:not(.reverse) .tl2-der { display: none; }
-  .tl2-fila.reverse .tl2-izq { display: none; }
-
-  .tl2-fila:not(.reverse) .tl2-izq {
-    display: block;
-    text-align: left;
-    padding: 0 0.75rem;
-    flex: 1;
-  }
-
-  .tl2-fila.reverse .tl2-der {
-    display: block;
-    text-align: left;
-    padding: 0 0.75rem;
-    flex: 1;
-  }
-
-  .tl2-fila:not(:last-child)::after {
-    left: 0;
-    right: 0;
-  }
-}
-
 /* ---- RSVP ---- */
 .seccion-rsvp {
   text-align: center;
@@ -812,7 +757,7 @@ footer p {
 .restaurante-ir:hover { color: var(--verde); }
 
 /* ==============================
-   MOBILE — todo en un solo bloque
+   MOBILE
    ============================== */
 @media (max-width: 768px) {
   nav { padding: 0 1.5rem; }
@@ -833,16 +778,12 @@ footer p {
   }
 
   .hamburger { display: flex; }
-
   .section { padding: 4rem 1.5rem; }
   .seccion-rsvp { padding: 4rem 1.5rem; }
-
   .hero h1 { font-size: clamp(3rem, 12vw, 5rem); }
   .hero-tagline { font-size: 1.1rem; }
-
   .info-grid { grid-template-columns: 1fr; gap: 1.25rem; }
   .info-block { padding: 2rem 1.5rem; }
-
   .event-card { padding: 1.75rem; }
   .person-grid { grid-template-columns: 1fr; }
   .lista-box { padding: 2rem 1.5rem; }
@@ -863,93 +804,101 @@ footer p {
     box-sizing: border-box;
   }
 
-  /* MINUTO A MINUTO MÓVIL */
+  /* ---- MINUTO A MINUTO MÓVIL ---- */
   .seccion-timeline {
     background-attachment: scroll;
     padding: 4rem 0;
   }
 
   .tl2-linea {
-    padding: 0;
+    padding: 0 1.5rem;
     max-width: 100%;
   }
 
   /* Línea vertical a la izquierda */
   .tl2-linea::before {
-    left: 2rem;
+    left: 3rem;
     transform: none;
   }
 
-  /* Cada fila: corazón a la izquierda, contenido a la derecha */
+  /* Cambiamos grid por flex para control total */
   .tl2-fila {
-    grid-template-columns: 3rem 1fr;
-    grid-template-rows: auto auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     min-height: auto;
-    padding: 1.75rem 1.25rem 1.75rem 0;
-    align-items: flex-start;
+    padding: 1.5rem 0;
+    gap: 0;
+    position: relative;
   }
 
-  /* Ocultamos la columna que no toca en móvil */
-  .tl2-fila .tl2-izq,
-  .tl2-fila .tl2-der { display: none; }
+  .tl2-fila:not(:last-child)::after {
+    left: 0;
+    right: 0;
+  }
 
-  /* Fila normal (texto izq, imagen der): mostramos texto izq */
+  /* Corazón siempre primero a la izquierda */
+  .tl2-centro {
+    order: 1;
+    width: 3rem;
+    flex-shrink: 0;
+    justify-content: center;
+    align-self: center;
+  }
+
+  /* Texto siempre segundo */
+  .tl2-izq,
+  .tl2-der {
+    order: 2;
+    flex: 1;
+    text-align: left;
+    padding: 0 0.75rem;
+  }
+
+  /* Imagen siempre tercera y más pequeña */
+  .tl2-izq img,
+  .tl2-der img {
+    order: 3;
+  }
+
+  /* Fila normal: texto en izq, imagen en der */
+  /* Mostramos tl2-izq (texto) y ocultamos tl2-der (imagen) */
   .tl2-fila:not(.reverse) .tl2-izq {
     display: block;
-    text-align: left;
-    padding: 0 1rem 0 0.5rem;
-    grid-column: 2;
-    grid-row: 1;
+    order: 2;
   }
 
-  /* Fila reverse (imagen izq, texto der): mostramos texto der */
+  .tl2-fila:not(.reverse) .tl2-der {
+    display: flex;
+    order: 3;
+    flex: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  /* Fila reverse: imagen en izq, texto en der */
+  /* Mostramos tl2-der (texto) y recolocamos tl2-izq (imagen) */
   .tl2-fila.reverse .tl2-der {
     display: block;
-    text-align: left;
-    padding: 0 1rem 0 0.5rem;
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  /* Imagen pequeña debajo del texto en ambos casos */
-  .tl2-fila:not(.reverse) .tl2-der {
-    display: block;
-    padding: 0.5rem 1rem 0 0.5rem;
-    grid-column: 2;
-    grid-row: 2;
-    text-align: left;
+    order: 2;
   }
 
   .tl2-fila.reverse .tl2-izq {
-    display: block;
-    padding: 0.5rem 1rem 0 0.5rem;
-    grid-column: 2;
-    grid-row: 2;
+    display: flex;
+    order: 3;
+    flex: 0;
+    padding: 0;
+    align-items: center;
     text-align: left;
   }
 
-  /* Corazón siempre en columna 1 */
-  .tl2-centro {
-    grid-column: 1;
-    grid-row: 1;
-    width: 3rem;
-    justify-content: center;
-    padding-top: 0.15rem;
-    align-self: flex-start;
-  }
-
   .tl2-img {
-    width: 55px;
-    height: 55px;
-    opacity: 0.8;
+    width: 50px;
+    height: 50px;
+    opacity: 0.75;
   }
 
-  /* Línea separadora entre filas */
-  .tl2-fila:not(:last-child)::after {
-    left: 0; right: 0;
-  }
-
-  /* Restaurantes en móvil */
+  /* Restaurantes móvil */
   .restaurante-fila {
     flex-direction: column;
     align-items: flex-start;
