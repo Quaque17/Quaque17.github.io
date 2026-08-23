@@ -240,8 +240,8 @@ nav {
 
 /* ---- PÁGINA HERO (subpáginas) ---- */
 .page-hero {
-  height: 50vh;
-  min-height: 320px;
+  height: 35vh;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1198,8 +1198,8 @@ nav {
 
 /* ---- PÁGINA HERO (subpáginas) ---- */
 .page-hero {
-  height: 50vh;
-  min-height: 320px;
+  height: 35vh;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
