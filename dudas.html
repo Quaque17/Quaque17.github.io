@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dudas — Quique &amp; Susana</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <script src="js/nav.js"></script>
+
+  <audio id="musica-boda" loop preload="auto">
+    <source src="music/cancion.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-btn" id="music-btn" aria-label="Reproducir música">
+    <span class="music-icon">♪</span>
+  </button>
+
+  <div class="page-hero">
+    <p class="hero-ornament" style="color:var(--dorado);">Quique &amp; Susana</p>
+    <h1>Dudas</h1>
+    <div class="section-divider"></div>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--verde-light);font-size:1.1rem;">Todo lo que necesitáis saber</p>
+  </div>
+
+  <section class="section">
+    <p class="section-subtitle">Información general</p>
+    <h2 class="section-title">Preguntas <em>frecuentes</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="faq-lista" style="max-width:700px;margin:2rem auto 0;">
+
+      <!-- PARKING -->
+      <div class="faq-item">
+        <button class="faq-pregunta" onclick="toggleFaq(this)">
+          <span>¿Hay parking en la iglesia y en la finca?</span>
+          <span class="faq-icono">+</span>
+        </button>
+        <div class="faq-respuesta">
+          <p><!-- ✏️ Rellena con la info de parking --></p>
+        </div>
+      </div>
+
+      <!-- ROPERO -->
+      <div class="faq-item">
+        <button class="faq-pregunta" onclick="toggleFaq(this)">
+          <span>¿Hay ropero en la finca?</span>
+          <span class="faq-icono">+</span>
+        </button>
+        <div class="faq-respuesta">
+          <p><!-- ✏️ Rellena con la info del ropero --></p>
+        </div>
+      </div>
+
+      <!-- TIEMPO -->
+      <div class="faq-item">
+        <button class="faq-pregunta" onclick="toggleFaq(this)">
+          <span>¿Qué tiempo hará en diciembre en Madrid?</span>
+          <span class="faq-icono">+</span>
+        </button>
+        <div class="faq-respuesta">
+          <p>En diciembre en Madrid las temperaturas suelen rondar los 5–12°C durante el día y pueden bajar bastante por la noche. Os recomendamos traer un abrigo para el trayecto entre la iglesia y la finca, especialmente para los que llevéis vestido.</p>
+        </div>
+      </div>
+
+      <!-- HORARIOS -->
+      <div class="faq-item">
+        <button class="faq-pregunta" onclick="toggleFaq(this)">
+          <span>¿Cuáles son los horarios del día?</span>
+          <span class="faq-icono">+</span>
+        </button>
+        <div class="faq-respuesta">
+          <p><strong style="color:var(--verde)">12:00 h</strong> — Ceremonia en la iglesia de Santa María Micaela y San Enrique</p>
+          <p><strong style="color:var(--verde)">13:15 h</strong> — Salida del autobús desde Calle San Germán, 15</p>
+          <p><strong style="color:var(--verde)">14:00 h</strong> — Banquete en Initium Bodas y Eventos</p>
+          <p><strong style="color:var(--verde)">18:00 h</strong> — Baile</p>
+        </div>
+      </div>
+
+      <!-- AUTOBÚS -->
+      <div class="faq-item">
+        <button class="faq-pregunta" onclick="toggleFaq(this)">
+          <span>¿Cómo funciona el servicio de autobús?</span>
+          <span class="faq-icono">+</span>
+        </button>
+        <div class="faq-respuesta">
+          <p>Habrá un autobús que saldrá a las <strong style="color:var(--verde)">13:15 h</strong> desde <strong style="color:var(--verde)">Calle San Germán, 15</strong> con dirección a la finca. Si necesitas plaza, indícalo en el formulario de confirmación de asistencia.</p>
+        </div>
+      </div>
+
+      <!-- VESTIMENTA -->
+      <div class="faq-item">
+        <button class="faq-pregunta" onclick="toggleFaq(this)">
+          <span>¿Cuál es el código de vestimenta?</span>
+          <span class="faq-icono">+</span>
+        </button>
+        <div class="faq-respuesta">
+          <p><strong style="color:var(--verde)">Damas:</strong> Vestido de fiesta. Tened en cuenta que en diciembre hará frío, así que un abrigo elegante puede ser vuestra mejor aliada.</p>
+          <p style="margin-top:0.75rem;"><strong style="color:var(--verde)">Caballeros:</strong> Traje con corbata o pajarita.</p>
+        </div>
+      </div>
+
+      <!-- NIÑOS -->
+      <div class="faq-item">
+        <button class="faq-pregunta" onclick="toggleFaq(this)">
+          <span>¿Pueden venir niños a la boda?</span>
+          <span class="faq-icono">+</span>
+        </button>
+        <div class="faq-respuesta">
+          <p><!-- ✏️ Rellena con vuestra política sobre niños --></p>
+        </div>
+      </div>
+
+      <!-- REGALOS -->
+      <div class="faq-item">
+        <button class="faq-pregunta" onclick="toggleFaq(this)">
+          <span>¿Tenéis lista de bodas?</span>
+          <span class="faq-icono">+</span>
+        </button>
+        <div class="faq-respuesta">
+          <p>Vuestra presencia es el mejor regalo. Si aun así queréis hacernos un detalle, podéis hacer una aportación a nuestra cuenta:</p>
+          <p style="margin-top:0.75rem;font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--verde);"><!-- ✏️ IBAN: ES00 0000 0000 0000 0000 0000 --></p>
+        </div>
+      </div>
+
+      <!-- CONFIRMACIÓN -->
+      <div class="faq-item">
+        <button class="faq-pregunta" onclick="toggleFaq(this)">
+          <span>¿Hasta cuándo puedo confirmar la asistencia?</span>
+          <span class="faq-icono">+</span>
+        </button>
+        <div class="faq-respuesta">
+          <p>Os pedimos que confirmáis antes del <strong style="color:var(--verde)">1 de octubre de 2026</strong> a través del formulario de confirmación disponible en la página principal.</p>
+        </div>
+      </div>
+
+      <!-- CONTACTO -->
+      <div class="faq-item">
+        <button class="faq-pregunta" onclick="toggleFaq(this)">
+          <span>¿Tengo alguna otra duda? ¿A quién me dirijo?</span>
+          <span class="faq-icono">+</span>
+        </button>
+        <div class="faq-respuesta">
+          <p>Si tienes cualquier otra pregunta que no esté aquí resuelta, no dudes en escribirnos directamente. Estaremos encantados de ayudarte.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p class="footer-names">Quique &amp; Susana</p>
+    <p>12 · Diciembre · 2026</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const respuesta = item.querySelector('.faq-respuesta');
+      const icono = btn.querySelector('.faq-icono');
+      const abierto = item.classList.contains('abierto');
+
+      // Cierra todos
+      document.querySelectorAll('.faq-item.abierto').forEach(el => {
+        el.classList.remove('abierto');
+        el.querySelector('.faq-respuesta').style.maxHeight = null;
+        el.querySelector('.faq-icono').textContent = '+';
+      });
+
+      // Abre el clickado si estaba cerrado
+      if (!abierto) {
+        item.classList.add('abierto');
+        respuesta.style.maxHeight = respuesta.scrollHeight + 'px';
+        icono.textContent = '−';
+      }
+    }
+  </script>
+</body>
+</html>
