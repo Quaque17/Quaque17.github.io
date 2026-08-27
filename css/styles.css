@@ -261,6 +261,9 @@ nav {
 
 /* ---- ACCESOS RÁPIDOS ---- */
 .info-grid {
+   .info-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
@@ -862,6 +865,7 @@ footer p {
   .hero h1 { font-size: clamp(3rem, 12vw, 5rem); }
   .hero-tagline { font-size: 1.1rem; }
   .info-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .info-grid-3 { grid-template-columns: 1fr; }
   .info-block { padding: 2rem 1.5rem; }
   .event-card { padding: 1.75rem; }
   .person-grid { grid-template-columns: 1fr; }
