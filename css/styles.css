@@ -891,6 +891,17 @@ footer p {
   .person-grid { grid-template-columns: 1fr; }
   .lista-box { padding: 2rem 1.5rem; }
   .info-sub-grid { grid-template-columns: 1fr; }
+   .hero-fade {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: heroFadeIn 1s ease forwards;
+}
+
+.hero-ornament.hero-fade { animation-delay: 1.8s; }
+.hero h1.hero-fade       { animation-delay: 2.2s; }
+.hero-divider.hero-fade  { animation-delay: 2.6s; }
+.hero-fecha.hero-fade    { animation-delay: 2.9s; }
+.hero-tagline.hero-fade  { animation-delay: 3.2s; }
 
   .music-btn {
     bottom: 1.25rem;
