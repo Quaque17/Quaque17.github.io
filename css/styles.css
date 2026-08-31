@@ -838,7 +838,7 @@ footer p {
 
 .restaurante-ir:hover { color: var(--verde); }
 
-* ---- HERO FADE ---- */
+/* ---- HERO FADE ---- */
 .hero-fade {
   opacity: 0;
   transform: translateY(12px);
