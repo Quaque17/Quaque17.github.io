@@ -103,7 +103,7 @@ nav {
   position: relative;
   background-image: url('https://raw.githubusercontent.com/Quaque17/Quaque17.github.io/main/img/039fe354-429a-420e-af50-00321ff71bb2.jpeg');
   background-size: cover;
-  background-position: center center;
+  background-position: center 30%;
   background-repeat: no-repeat;
   overflow: hidden;
 }
@@ -337,7 +337,7 @@ nav {
 .seccion-timeline {
   background-image: url('https://raw.githubusercontent.com/Quaque17/Quaque17.github.io/main/img/039fe354-429a-420e-af50-00321ff71bb2.jpeg');
   background-size: cover;
-  background-position: center center;
+  background-position: center 30%;
   background-attachment: fixed;
   position: relative;
   padding: 6rem 0;
