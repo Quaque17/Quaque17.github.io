@@ -848,11 +848,11 @@ footer p {
   animation: heroFadeIn 1s ease forwards;
 }
 
-.hero-ornament.hero-fade { animation-delay: 1.8s; }
-.hero h1.hero-fade       { animation-delay: 4.0s; }
-.hero-divider.hero-fade  { animation-delay: 4.2s; }
-.hero-fecha.hero-fade    { animation-delay: 4.5s; }
-.hero-tagline.hero-fade  { animation-delay: 3.2s; }
+.hero-ornament.hero-fade { animation-delay: 2.0s; }
+.hero h1.hero-fade       { animation-delay: 7.0s; }
+.hero-divider.hero-fade  { animation-delay: 7.2s; }
+.hero-fecha.hero-fade    { animation-delay: 7.5s; }
+.hero-tagline.hero-fade  { animation-delay: 4.0s; }
 
 @keyframes heroFadeIn {
   to {
