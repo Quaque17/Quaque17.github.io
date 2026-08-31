@@ -849,9 +849,9 @@ footer p {
 }
 
 .hero-ornament.hero-fade { animation-delay: 1.8s; }
-.hero h1.hero-fade       { animation-delay: 2.2s; }
-.hero-divider.hero-fade  { animation-delay: 2.6s; }
-.hero-fecha.hero-fade    { animation-delay: 2.9s; }
+.hero h1.hero-fade       { animation-delay: 4.0s; }
+.hero-divider.hero-fade  { animation-delay: 4.2s; }
+.hero-fecha.hero-fade    { animation-delay: 4.5s; }
 .hero-tagline.hero-fade  { animation-delay: 3.2s; }
 
 @keyframes heroFadeIn {
